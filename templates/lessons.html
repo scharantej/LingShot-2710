@@ -1,0 +1,19 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mandarin Lessons</title>
+</head>
+<body>
+<h1>Mandarin Lessons</h1>
+{% for lesson in lessons %}
+<h2>{{ lesson.title }}</h2>
+<ul>
+{% for section in lesson.sections %}
+<li><a href="/lessons/{{ lesson.id }}#{{ section.title }}">{{ section.title }}</a></li>
+{% endfor %}
+</ul>
+{% endfor %}
+</body>
+</html>
+
